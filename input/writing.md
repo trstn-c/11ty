@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: posts.njk
 title: Writing
 templateEngineOverride: njk,md
 ---

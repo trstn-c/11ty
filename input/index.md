@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: posts.njk
 title: Welcome
 templateEngineOverride: njk,md
 ---
