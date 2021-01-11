@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🥲</text></svg>">
+<title>{{ title }}</title>
+{# capture the CSS content as a Nunjucks variable #}
+{% set css %}{% include "posts.css" %}{% endset %}
+{# feed it through a cssmin filter to minify  #}
+<style>
+{{ css | safe }}
+</style>
+{# javascript #}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+</head>
+<body>
+	<nav>
+		<a href="/">Trstn</a>
+		{# <a href="/about/">About</a> #}
+		<a href="/writing/">Writing</a>
+		{# <a href="/">Photos</a> #}
+		{# <a href="/">Projects</a> #}
+		<a href="/colophon/">Colophon</a>
+	</nav>
+	<div class="nav-arrow"></div>
+	<main>
+		<article>
+			{{ content | safe }}
+		</article>
+	</main>
+	<script type="text/javascript">
+	$(".nav-arrow").click(function() {
+	  $("nav").toggleClass("navAway");
+	  $("nav").toggleClass("navBack");
+	  $(this).toggleClass("close");
+	});
+	</script>
+</body>
+</html>
+</html>

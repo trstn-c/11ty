@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🥲</text></svg>">
+<title>Welcome Anew</title>
+
+
+
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;1,400;1,500&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f6f6f5;
+}
+
+nav {
+  background-color: rgba(255, 255, 255, 0.85);
+  width: 12rem;
+  height: 96vh;
+  margin: 2vh 1rem;
+  border-radius: 0.25rem;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2.8px 3.3px rgba(0, 0, 0, 0.014), 0 6.7px 8px rgba(0, 0, 0, 0.02), 0 12.5px 15px rgba(0, 0, 0, 0.025), 0 22.3px 26.8px rgba(0, 0, 0, 0.03), 0 41.8px 50.1px rgba(0, 0, 0, 0.036), 0 100px 120px rgba(0, 0, 0, 0.05);
+  transition: all 450ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  z-index: 9;
+}
+nav a {
+  padding: 1.5rem;
+  height: 100%;
+  text-decoration: none;
+  font-family: "SF Compact Rounded", "Overpass";
+  font-size: 1.5rem;
+  color: rgba(22, 22, 29, 0.95);
+  transition: all 250ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+nav a:first-child {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #5F4B8B;
+  letter-spacing: 0.25rem;
+  border-bottom: 2px solid rgba(22, 22, 29, 0.75);
+}
+nav a:first-child:hover {
+  color: #F5B0BD;
+}
+nav a:hover {
+  color: #5F4B8B;
+}
+
+.nav-arrow {
+  z-index: 99;
+  position: fixed;
+  left: 12rem;
+  bottom: 6rem;
+  width: 0;
+  height: 0;
+  border-top: 16px solid transparent;
+  border-bottom: 16px solid transparent;
+  border-right: 16px solid rgba(22, 22, 29, 0.75);
+  cursor: pointer;
+  transition: all 450ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+.nav-arrow:hover {
+  border-right: 16px solid rgba(22, 22, 29, 0.45);
+}
+
+.nav-arrow.close {
+  left: 2rem;
+  transform: rotate(180deg);
+  transition: all 450ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+.navAway {
+  margin-left: -10rem;
+}
+
+@media screen and (max-width: 1440px) {
+  nav {
+    flex-direction: row;
+    width: 96vw;
+    height: 5rem;
+    margin: 1rem 2vw;
+    top: 0;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  nav a:first-child {
+    margin-right: auto;
+    font-size: 1.5rem;
+    border-bottom: 0px solid rgba(22, 22, 29, 0.75);
+    border-right: 2px solid rgba(22, 22, 29, 0.75);
+  }
+
+  .nav-arrow {
+    left: 14rem;
+    top: 4.5rem;
+    transform: rotate(90deg);
+  }
+
+  .nav-arrow.close {
+    left: 14rem;
+    top: 1.5rem;
+    transform: rotate(-90deg);
+  }
+
+  .navAway {
+    margin-left: 2vw;
+    margin-top: -3rem;
+  }
+}
+@media screen and (max-width: 812px) {
+  nav a {
+    padding: 1.5rem 0.5rem;
+    transform: rotate(-30deg);
+  }
+  nav a:first-child {
+    border-right: 0px;
+  }
+}
+@media screen and (max-width: 600px) {
+  nav {
+    flex-direction: row;
+    width: 100vw;
+    height: 5rem;
+    margin: 0;
+  }
+  nav a {
+    padding: 1.5rem 0rem;
+    transform: rotate(-45deg);
+  }
+  nav a:first-child {
+    margin-right: auto;
+    padding: 1.5rem;
+    transform: rotate(0deg);
+  }
+  nav a:not(:first-child) {
+    width: 0;
+    height: 0;
+    opacity: 20%;
+    transition: all 450ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .nav-arrow {
+    left: auto;
+    right: 0rem;
+    top: 1.5rem;
+    transform: rotate(0deg);
+    margin-top: -2px;
+  }
+
+  .nav-arrow.close {
+    left: auto;
+    right: 3rem;
+    top: 3.5rem;
+    transform: rotate(90deg);
+  }
+
+  .navAway {
+    margin-left: auto;
+    margin-top: auto;
+  }
+
+  .navBack {
+    flex-direction: column;
+    height: auto;
+  }
+  .navBack a {
+    padding: 1.5rem;
+    transform: rotate(0deg);
+  }
+  .navBack a:not(:first-child) {
+    opacity: 100%;
+    width: 100vw;
+    height: auto;
+    border-top: 2px solid rgba(22, 22, 29, 0.75);
+    transition: all 450ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+}
+html, body {
+  font-size: 100%;
+}
+
+article {
+  color: rgba(22, 22, 29, 0.95);
+  font-size: 150%;
+  font-family: "Alegreya";
+}
+article h1 {
+  font-size: 2.986em;
+  line-height: calc(1ex / 0.42);
+  max-inline-size: 20ch;
+}
+article h2 {
+  color: rgba(22, 22, 29, 0.75);
+  font-size: 2.074em;
+  line-height: calc(1ex / 0.42);
+  margin: calc(1ex / 0.62) 0;
+  max-inline-size: 25ch;
+}
+article h3 {
+  color: rgba(22, 22, 29, 0.65);
+  font-size: 1.728em;
+  line-height: calc(1ex / 0.38);
+  margin: calc(1ex / 0.58) 0;
+  max-inline-size: 30ch;
+}
+article h4 {
+  color: rgba(22, 22, 29, 0.55);
+  font-size: 1.44em;
+  line-height: calc(1ex / 0.37);
+  margin: calc(1ex / 0.58) 0;
+  max-inline-size: 30ch;
+}
+article p, article li, article dd, article dt {
+  font-size: 1em;
+  line-height: calc(1ex / 0.34);
+  margin: calc(1ex / 0.52) 0;
+  max-inline-size: 60ch;
+}
+article ul ul {
+  margin-left: 2em;
+}
+article blockquote p {
+  hanging-punctuation: first;
+}
+article a {
+  font-family: "SF Compact Rounded", "Overpass";
+  text-decoration: none;
+  color: #F5B0BD;
+  transition: all 250ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+article a:hover {
+  color: #5F4B8B;
+}
+
+main {
+  margin: 3rem;
+  display: grid;
+  place-content: center;
+}
+
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+</head>
+<body>
+	<nav>
+		<a href="/">Trstn</a>
+		
+		<a href="/writing/">Writing</a>
+		
+		
+		<a href="/colophon/">Colophon</a>
+	</nav>
+	<div class="nav-arrow"></div>
+	<main>
+		<article>
+			<h1>Welcome Anew</h1>
+<h2>Firstly, Thank You</h2>
+<p>To start off with, I want to say thanks for being here. In the very specific way that you're &quot;here&quot; reading this. But also, thanks for still being &quot;here&quot; in this world that we're living in. I've had my share of moments in this last while where I've considered that maybe I needn't keep going. Sometimes when life unravels in front of you, the need really does seem to melt away. A whole lot of wants are findable though. Some are hidden in plain site, some are obfuscated and fragmented, some are like trauma triggering mind fields, some meander in with new paradigms, and some are just simple cravings. I appreciate whatever comes in whatever way it does. However life decides to shatter what it once was, there is more it has to offer that's imaginable and unimaginable. Even the liminal moments of waiting like one might on a train from one chapter to the next can be as magical as anything.</p>
+<p>I think the struggle of it all (a pandemic and a whole lot of political fiascoes) has had its way with nearly everyone. And you and I — whoever you might be, I imagine our problems are quite uniquely different, and likely similar too. We've probably felt similar pains and we've likely felt pain's neither of us can imagine accurately. There tends to be a certain amount of giving up that actually <em>is</em> good. But, circumstances can make one consider the permanent forms of giving up. There's a great deal of letting go before that's ever necessary. I think it's incredibly important not to give into that unless you're in some exceptional circumstances (that can happen). So, I don't want to ramble too much, but thank you. Thank you for sticking around. Whether it's been hard or not, it'll get harder and it'll get easier too. And maybe if you can, thank someone else. Or check up on them. Help them let go so as to not leg go, or hold on so as to keep going.</p>
+<h2>Another Start</h2>
+<p>What's this I'm doing here? I'm not <em>completely</em> sure. I'm still working that out but I intend to work it out while it's in motion. Over the past few years I've been meaning to update my website and until now there have been too many excuses not to. Whether I was too busy or attempting to not be busy at all, it got left to the side. In Q4 of last year I realized how much I wanted to prioritize writing, and building myself a presence and a digital garden and finding niches, and growing roots, and, reigning in all the &quot;ands&quot;. Balance isn't exactly something I know intimately, but I'm attempting to know it better. Amongst plenty of messes, I can give myself a ⭐ for that. This year '21, I intend to show up, put my fingers to my keyboards, and share something at least every week. My original idea for this first blog post was that I'd share some sort of yearly review. It felt cliche but a fun way to start anyway. In a predictably unpredictable fashion, that's not what ended up coming out. This has turned into an oddly self referential little piece. Accidental meta is a fun place to be too. Maybe in a week or two I'll write something about my 2020 hindsight. Something short because that year did not treat my heart well. What follows is some talk about websites and my journey with them.</p>
+<h3>A Website is a Thing That Serves</h3>
+<p>A website is not a waiter or a restaurant, or the food or drinks made there. But as far as metaphors go, a website is all three at once. It's a file on your computer, that was on someone else's computer, that got to you with a bunch of cables and at least one other computer too. It's the text or images or blur of colours that you might see, and it's a spot among all the connections it tries to make. In a recent sculpture course I wanted make a piece that looked at the various journeys all the data go on. I couldn't quite find the right way to represent that, but I might give it a go again in the future. That web of travel and strands and connections really fascinates me. I was born the same year as Netscape, and even if it's all just technology full of bits and blobs, I find it unexpectedly romantic. To me, a perpetual serendipity machine can be quite the beautiful thing. The thing it once was has grown quite the blemishes, but the ebb and flow still has beauty that's hard to measure — and there's likely no need to. Best to just enjoy it.</p>
+<p>I've always enjoyed small and medium sized websites and found the corporate ones to have almost a venomous and parasitic effect on a lot of internet wanderings. I've yet to do enough research that would qualify me to write an article about it but I've seen plenty of posts about the big algorithm companies facilitating genocides. Writing that makes me want to stop writing and go delete my Facebook and Instagram accounts, but I'm too bolted into those platforms and being able to contact friends and family through them. I'm sure progress with managing those monsters will happen. I won't make any bets for some time though. A resurgence of blogs and newsletters and internet communities leaves me much less sick to my stomach and a whole lot more hopeful. So I've decided to participate.</p>
+<h3>What Was, or Has Been</h3>
+<p>For as long as I can remember (as unreliable as my memory is) I've wanted my own little spot on the web. I think the first website I ever made was around 12 years ago. I was motivated by a similarly nerdy friend and didn't quite have the computer literacy until that point. That one wasn't anything special and was wildly difficult to make. It didn't last long. Dreamweaver was far from an elegant program and I remember having to slice up images up to create layouts. It was far from intuitive. It really wasn't for me either.  Tumblr gained more traction and that's where I really got to get comfy in my own corner. In some sense it was my teenage internet home. I learnt how to make themes for it and use HTML and CSS in a more semantic fashion. And then, plenty of folks grew out of that platform and I guess I did too. I even considered going back at some points but it seemed the golden age of Tumblr passed. Getting acquired by Yahoo sealed the deal there.</p>
+<p>According to github my last website was updated about 4 years ago. A lot has changed since then. I didn't see myself as a writer and I didn't see myself as an artist. I had soft aspirations for possible part time web design but I had too much perfectionism and not enough drive for that ambition. I remember being inspired by <a href="gwern.net">gwern.net</a>, blogs from the early 2000s that weren't explicitly attached to portfolios or CVs, and plenty of small odd or lovely sites. It used <a href="https://jekyllrb.com">Jekyll</a> which is built into Github and was fairly approachable to setup. The design was nice and minimal but broke on some devices. I couldn't quite figure out how to make things nicely responsive. The typography wasn't exactly <em>bad</em> but it wasn't <em>great</em> either. Whenever I went back to it recently I always found it wasn't quite as readable as I'd like. It had some fun little ideas that I'm going to try and implement in better ways this time around. I think I deserve a ⭐ for that stepping stone in the right direction. Now we're on the way to bigger and better things. But, slowly...</p>
+<h3>What Is</h3>
+<p>This new site attempts to follow a pattern of simplicity. As I did with my last, I like to start with the <a href="https://en.wikipedia.org/wiki/KISS_principle">KISS principle</a>. Instead of Jekyll like before I've opted to use <a href="https://www.11ty.dev">11ty</a>. It's even more intuitive and even more flexible. It still manages to stay simple though, which a lot of options sure don't do. Currently there are very few pages because there doesn't need to be. Typography has been a priority because the initial purpose of this site is and will be to share writing. For the navigation and eventually other bits of UI I've decided to use a font I've loved for quite a while, <a href="https://overpassfont.org">Overpass</a>. For body copy I found <a href="https://www.huertatipografica.com/en/fonts/alegreya-ht-pro">Alegreya</a> after staying up far too late one evening this past week trying to find a font that'd fit just right. Things are responsive for various screen sizes but not yet at a point I'm truly happy with. Overall? It's a new starting point and definitely good enough to start posting blog posts and eventually articles.</p>
+<p>Some of this is a bit verbose and might use more jargon than I need to even if it uses way less than it could. If you'd like a bit more info on the technical makeup of this site you can check out the <a href="/colophon/">Colophon</a> page. I've tried to make it comprehensive and will add more details as I go along. Eventually I might make a blog post on the process I went through and explain my decisions a little further. If you were looking to start or restart a website, would I suggest the same setup? In short: yes. But the long answer is a wishy washy maybe. It depends. For many, I'd suggest <a href="https://webflow.com">Webflow</a>, but it's more expensive and in some technical ways much less simple. For some, just hiring a small web developer to modify a template and setup a simple website like this might be a great option. It's nearly free. If you've read this far and you're interested in any of these approaches, feel free to message me on twitter or email me and I can explain things in further detail or start writing up a short article on some of the simple options. There are quite a few.</p>
+<h3>What Will Be</h3>
+<p>I seem to have written a longer blog post that I originally intended to. I hope that happens next time. Maybe this was longer than it needed to be or maybe it's just long enough. I appreciate you having read this and I'm grateful I'm able to write it. Eventually this website will be a more fleshed out digital garden of sorts. Somewhere between a blog and a personal wiki. In some way neither of those sound right because I plan to encapsulate a multitude. Projects, art pieces, photography, poems, and plenty more will be grown and well watered. I'm inspired by: <a href="https://anne-laure.net">Anne-Laure</a> and her <a href="https://nesslabs.com">Ness Labs</a> project, <a href="https://knowingless.com">Aella</a>, Gwern Branwen at <a href="gwern.net">gwern.net</a> still, <a href="https://maggieappleton.com">Maggie Appleton</a> and her posts about digital gardens, <a href="https://www.nateliason.com">Nat</a> and his hacky sounding yet motivational and genuine content, <a href="https://dana.kim">Dana Kim</a> who's site has recently become just an animated email address, and a variety of others.</p>
+<p>If you enjoyed this, there will be more. Thank you. ✌️</p>
+
+		</article>
+	</main>
+	<script type="text/javascript">
+	$(".nav-arrow").click(function() {
+	  $("nav").toggleClass("navAway");
+	  $("nav").toggleClass("navBack");
+	  $(this).toggleClass("close");
+	});
+	</script>
+</body>
+</html>
+</html>
