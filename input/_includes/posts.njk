@@ -7,7 +7,6 @@
 <title>{{ title }}</title>
 {# capture the CSS content as a Nunjucks variable #}
 {% set css %}{% include "posts.css" %}{% endset %}
-{# feed it through a cssmin filter to minify  #}
 <style>
 {{ css | safe }}
 </style>

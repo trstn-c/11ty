@@ -1,5 +1,5 @@
 ---
-layout: posts.njk
+layout: posts
 title: Colophon
 ---
 # {{title}}
@@ -21,4 +21,4 @@ It's a choice I'm happy with. I have no doubt it's related to my too many intere
 - Nunjucks, because it's readable and quick to figure out in a simple way. Others are simpler but there's something nice about good documentation and a higher ceiling of potential use.
 	- I liked Pug when I was looking at different options but then I found some of it not quickly grokkable. This doesn't mean that it's bad in a general sense. It's just bad for my use case. For this I needed something that I could implement quickly and have a minimum effective dose quickly.
 - Typeset with [Overpass](https://overpassfont.org) and [Alegreya](https://www.huertatipografica.com/en/fonts/alegreya-ht-pro). Both are hosted on [Google Fonts](https://fonts.google.com). I've loved Overpass for quite some time and found it some point before it was ever on Google. Alegreya was chosen after getting lost one evening comparing a variety of well made fonts all night into the early morning.
-	- As much as I do love these two fonts, eventually I intend to switch to [Mrs Eaves](https://www.emigre.com/Fonts/Mrs-Eaves) for all body copy when I can afford to buy it. It is quite simply my favourite font. There's something about it that I eventually hope I can put better words too.
+	- As much as I do love these two fonts, eventually I intend to switch to [Mrs Eaves](https://www.emigre.com/Fonts/Mrs-Eaves) for all body copy when I can afford to buy it. It is quite simply my favourite font. There's something about it that I eventually hope I can put better words too. 

@@ -1,5 +1,7 @@
 ---
 title: Welcome Anew
+description: My first post, describing my website journey.
+featuredImage: /images/uploads/image1.jpg
 date: 2021-01-09
 version: 1.0
 ---
