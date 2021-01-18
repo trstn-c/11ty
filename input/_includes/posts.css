@@ -38,7 +38,6 @@ nav a:first-child {
   font-weight: 800;
   color: #5F4B8B;
   letter-spacing: 0.25rem;
-  border-bottom: 2px solid rgba(22, 22, 29, 0.75);
 }
 nav a:first-child:hover {
   color: #F5B0BD;
@@ -87,8 +86,6 @@ nav a:hover {
   nav a:first-child {
     margin-right: auto;
     font-size: 1.5rem;
-    border-bottom: 0px solid rgba(22, 22, 29, 0.75);
-    border-right: 2px solid rgba(22, 22, 29, 0.75);
   }
 
   .nav-arrow {
