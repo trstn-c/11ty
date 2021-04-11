@@ -7,6 +7,9 @@
   margin: 0;
   padding: 0;
 }
+/* * {
+	border: 1px solid red;
+} */
 
 body {
   background-color: #f6f6f5;
@@ -186,69 +189,76 @@ html, body {
   font-size: 100%;
 }
 
-article {
+main {
+  display: flex;
+  flex-flow: column wrap;
+  align-content: space-between;
+  height: 96vh;
+  margin-top: 1vh;
+  width: 100%;
+  margin: 0;
+}
+
+section {
   color: rgba(22, 22, 29, 0.95);
   font-size: 130%;
   font-family: "Alegreya";
-  margin: 5rem;
+  padding: 1.5rem;
   transform: rotateZ(5deg);
   transition: all 450ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  overflow-Y: scroll;
+  max width: 48%;
+  margin: 1%
 }
-article.close {
-	margin: 3.5rem;
+section.close {
 	transform: rotateZ(0deg);
 }
-article h1 {
+section h1 {
   font-size: 2.986em;
   line-height: calc(1ex / 0.42);
   max-inline-size: 20ch;
   font-style: italic;
   font-weight: 500;
 }
-article h2 {
+section h2 {
   color: rgba(22, 22, 29, 0.75);
   font-size: 2.074em;
   line-height: calc(1ex / 0.42);
   margin: calc(1ex / 0.62) 0;
   max-inline-size: 25ch;
 }
-article h3 {
+section h3 {
   color: rgba(22, 22, 29, 0.65);
   font-size: 1.728em;
   line-height: calc(1ex / 0.38);
   margin: calc(1ex / 0.58) 0;
   max-inline-size: 30ch;
 }
-article h4 {
+section h4 {
   color: rgba(22, 22, 29, 0.55);
   font-size: 1.44em;
   line-height: calc(1ex / 0.37);
   margin: calc(1ex / 0.58) 0;
   max-inline-size: 30ch;
 }
-article p, article li, article dd, article dt {
+section p, section li, section dd, section dt {
   font-size: 1em;
   line-height: calc(1ex / 0.34);
   margin: calc(1ex / 0.52) 0;
   max-inline-size: 60ch;
 }
-article ul ul {
+section ul ul {
   margin-left: 2em;
 }
-article blockquote p {
+section blockquote p {
   hanging-punctuation: first;
 }
-article a {
+section a {
   font-family: "SF Compact Rounded", "Overpass";
   text-decoration: none;
   color: #F5B0BD;
   transition: all 250ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
-article a:hover {
+section a:hover {
   color: #5F4B8B;
-}
-
-main {
-  display: grid;
-  place-content: center;
 }
